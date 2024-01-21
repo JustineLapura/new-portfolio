@@ -11,7 +11,7 @@ const Navbar = () => {
           alt=""
         />
         <h1 className="text-3xl text-yellow-700 font-bold cursor-pointer">
-          Jahz10 Cosmetics
+          Jovan Cosmetics
         </h1>
       </div>
       <div className="">
