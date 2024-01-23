@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="w-full flex gap-16 max-w-[1200px] min-h-screen mx-auto pt-28 ">
+    <motion.div
+      className="w-full flex gap-16 max-w-[1200px] min-h-screen mx-auto pt-28 "
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, duration: 0.5 }}
+    >
       <div className="w-full flex flex-col justify-around py-12">
         <h1 className="text-5xl font-bold text-gray-900 tracking-wide">
           Contact
@@ -22,9 +28,21 @@ const Contact = () => {
         <p className="text-gray-700 font-semibold">markjovanmoreno@gmail.com</p>
       </div>
       <div className="w-full flex flex-col justify-around py-10">
-        <input className="bg-gray-300 p-3 focus:outline-none" type="text" placeholder="Name" />
-        <input className="bg-gray-300 p-3 focus:outline-none" type="text" placeholder="Email" />
-        <input className="bg-gray-300 p-3 focus:outline-none" type="text" placeholder="Subject" />
+        <input
+          className="bg-gray-300 p-3 focus:outline-none"
+          type="text"
+          placeholder="Name"
+        />
+        <input
+          className="bg-gray-300 p-3 focus:outline-none"
+          type="text"
+          placeholder="Email"
+        />
+        <input
+          className="bg-gray-300 p-3 focus:outline-none"
+          type="text"
+          placeholder="Subject"
+        />
         <textarea
           className="bg-gray-300 p-3 focus:outline-none"
           name=""
@@ -33,9 +51,11 @@ const Contact = () => {
           rows="6"
           placeholder="Message"
         ></textarea>
-        <button className="w-[200px] mx-auto border-2 py-2 rounded-full bg-gray-400 text-white font-bold hover:bg-gray-500 duration-200">Submit</button>
+        <button className="w-[200px] mx-auto border-2 py-2 rounded-full bg-gray-400 text-white font-bold hover:bg-gray-500 duration-200">
+          Submit
+        </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
